@@ -19,11 +19,11 @@ The API supports both single and batch text predictions and is designed to integ
 ## Project Structure
 
 moodlens-api/
-│── sent_app.py # FastAPI app code
-│── requirements.txt # Python dependencies
-│── .gitignore # Ignore ML models, env files, etc.
-│── README.md # Project description
-│── start.sh # Optional: script to start the API
+│── sent_app.py # FastAPI app code <br>
+│── requirements.txt # Python dependencies <br>
+│── .gitignore # Ignore ML models, env files, etc. <br>
+│── README.md # Project description <br>
+│── start.sh # Optional: script to start the API <br>
 
 > **Note:** ML model files (`.joblib`) are **not included** in the repo to keep it lightweight.  
 > Download models separately or store them in cloud storage for production.
@@ -33,46 +33,46 @@ moodlens-api/
 ## Installation
 
 1. Clone the repository:
-`bash`
-`git clone https://github.com/nyarderr/moodlens-api.git`
-`cd moodlens-api`
+`bash` <br>
+`git clone https://github.com/nyarderr/moodlens-api.git` <br>
+`cd moodlens-api` <br>
 
 2. Install dependencies
-`pip install -r requirements.txt`
+`pip install -r requirements.txt` <br>
 
-3. Place your trained model files (model.joblib, vectorizer.joblib, label_encoder.joblib) in the project root.
+3. Place your trained model files (model.joblib, vectorizer.joblib, label_encoder.joblib) in the project root. <br>
 
 ---
 
 ## Running the API
 
-Locally
-   `bash `
-   `uvicorn sent_app:app --reload`
-   Visit http://127.0.0.1:8000/docs for interactive API docs (Swagger UI).
+### Locally <br>
+   `bash ` <br>
+   `uvicorn sent_app:app --reload` <br>
+   Visit http://127.0.0.1:8000/docs for interactive API docs (Swagger UI). <br>
 
 
-API EndPoints
+### API EndPoints
 
-1. Health Check
-   `bash`
-   `GET /health`
-   Response;
-   `json `
-   `{"status":"ok,"model":"loaded"}`
+1. Health Check <br>
+   `bash` <br>
+   `GET /health` <br>
+   Response; <br>
+   `json` <br>
+   `{"status":"ok,"model":"loaded"}` <br>
 
 
-2. Predict Sentiment
-   `bash`
-   `POST /predict`
-   PayLoad;
-   `json`
-   `{"text":"I love this product"}`- single text OR
-   `{"text": ["I love this!", "This is terrible."]}` - batch input (list of texts)
-   Response;
-   `json`
-   `{"Sentiment":"positive","Confidence:0.92}` OR
-   `[{"text": "I love this!", "Sentiment":"positive", "Confidence":0.93},{"text": "This is terrible.", "Sentiment":"negative", "Confidence":0.83}]`
+2. Predict Sentiment <br>
+   `bash` <br>
+   `POST /predict` <br>
+   PayLoad; <br>
+   `json` <br>
+   `{"text":"I love this product"}`- single text OR <br>
+   `{"text": ["I love this!", "This is terrible."]}` - batch input (list of texts) <br>
+   Response; <br>
+   `json` <br>
+   `{"Sentiment":"positive","Confidence:0.92}` OR <br>
+   `[{"text": "I love this!", "Sentiment":"positive", "Confidence":0.93},{"text": "This is terrible.", "Sentiment":"negative", "Confidence":0.83}]` <br>
 
 ---
 
@@ -85,6 +85,7 @@ API EndPoints
 - Ensure model files are accessible in production (local or cloud storage).
    
    
+
 
 
 
