@@ -1,4 +1,5 @@
 # MoodLens-API
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 **MoodLens-API** is a FastAPI-based REST API for sentiment analysis of text.  
 It uses a trained scikit-learn model to classify text as **positive** or **negative**. <br>
@@ -85,6 +86,7 @@ moodlens-api/
 - Ensure model files are accessible in production (local or cloud storage).
    
    
+
 
 
 
