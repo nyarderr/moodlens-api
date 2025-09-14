@@ -3,7 +3,6 @@ __pycache__/
 *.pyc
 
 # ML models
-*.joblib
 *.pkl
 *.h5
 *.sav
@@ -11,3 +10,4 @@ __pycache__/
 # Environment
 .env
 .venv/
+
