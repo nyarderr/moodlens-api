@@ -8,11 +8,17 @@ model = None
 vectorizer = None
 le = None
 
-app = FastAPI(title="Sentiment API")
+app = FastAPI(title="MoodLens-API")
 
 model = joblib.load("model.joblib")
 vectorizer = joblib.load("vectorizer.joblib")
 le = joblib.load("label_encoder.joblib")
+
+
+@app.get('/')
+def root():
+    return RedirectResponse(url="/docs")
+
 
 @app.get('/health')
 def health():
