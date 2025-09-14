@@ -2,6 +2,7 @@ from fastapi import FastAPI
 import joblib
 from pydantic import BaseModel
 from typing import Union
+from fastapi.responses import RedirectResponse
 
 
 model = None
